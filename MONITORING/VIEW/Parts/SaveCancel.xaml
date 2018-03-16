@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="MONITORING.SaveCancel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MONITORING"
+             mc:Ignorable="d">
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" FlowDirection="RightToLeft">
+        <Button x:Name="Cancel" Command="{Binding Cancel}" Content="Cancel" Width="75" Height="20" Margin="12,12,6,12" />
+        <Button x:Name="Save" Command="{Binding Save}" Content="Save" Width="75" Height="20" Margin="6,12,12,12" />
+    </StackPanel>
+</UserControl>

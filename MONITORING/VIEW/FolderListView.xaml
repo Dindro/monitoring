@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="MONITORING.FolderListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MONITORING"
+             mc:Ignorable="d" 
+             d:DesignHeight="455" d:DesignWidth="480">
+    <ScrollViewer Background="White" HorizontalScrollBarVisibility="Auto" >
+        <GroupBox x:Name="groupBox" Header="Windows Settings" Margin="6">
+            <Grid FocusManager.IsFocusScope="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <CheckBox x:Name="Activate" IsChecked="{Binding Activate}" Content="Activate/Deactivate Window" Grid.Row="0" Margin="12, 12, 12, 6" HorizontalAlignment="Left"/>
+
+                <GroupBox  Header="Output mode"  Grid.Row="1" Margin="12,6,12,6" Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Grid Margin="3" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <RadioButton x:Name="ByTurns" IsChecked="{Binding ByTurns}" GroupName="OutputMode" Content="by turns" Grid.Row="0" Margin="3" />
+                        <RadioButton  x:Name="Mosaic" IsChecked="{Binding Mosaic}" GroupName="OutputMode" Content="mosaic" Grid.Row="1" Margin="3"/>
+                        <RadioButton  x:Name="Cascade" IsChecked="{Binding Cascade}" GroupName="OutputMode" Content="cascade" Grid.Row="2" Margin="3" />
+                    </Grid>
+                </GroupBox>
+
+
+                <GroupBox Header="Rotation"  Grid.Row="2" Margin="12,6,12,6" Height="auto" Width="auto" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <CheckBox x:Name="AutoRotate" IsChecked="{Binding AutoRotate}" IsEnabled="{Binding AutoRotateEnabled}" 
+                              Content="Auto rotate &quot;SQL Command&quot; result" Grid.Row="0" Margin="6" VerticalAlignment="Center" />
+                </GroupBox>
+
+                <local:WindowRestangle Grid.Row="3"/>
+                
+                <CheckBox Name="ForcedToDisplay" IsChecked="{Binding ForcedToDisplay}" Content="Forced to display SQL command window contents on error" Grid.Row="4" Margin="12, 6, 12, 6" HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+
+                <local:SaveCancel Grid.Row="6" />
+            </Grid>
+        </GroupBox>
+    </ScrollViewer>
+</UserControl>

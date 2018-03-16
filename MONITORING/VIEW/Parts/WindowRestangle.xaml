@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="MONITORING.WindowRestangle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MONITORING"
+             mc:Ignorable="d">
+    <GroupBox Header="Window Restangle" Margin="12,6,12,6" Height="auto" Width="auto" HorizontalAlignment="Left">
+        <Grid Margin="3" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Height" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="3"/>
+            <TextBox Name ="HeightWin" Text="{Binding Height}" Width="50" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="3" />
+            <TextBlock Text="px" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Margin="3"/>
+            <TextBlock Text="Position X" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Left" Margin="3"/>
+            <TextBox Name ="PositionX" Text="{Binding PositionX}" Width="50" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Left" Margin="3" />
+            <TextBlock Text="px" Grid.Row="0" Grid.Column="6" Margin="3"/>
+
+            <TextBlock Text="Width" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Margin="3"/>
+            <TextBox Name ="WidthWin" Text="{Binding Width}" Width="50" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="3" />
+            <TextBlock Text="px" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="3"/>
+            <TextBlock Text="Position Y" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" Margin="3"/>
+            <TextBox Name ="PositionY" Text="{Binding PositionY}" Width="50" Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left" Margin="3" />
+            <TextBlock Text="px" Grid.Row="1" Grid.Column="6" HorizontalAlignment="Left" Margin="3"/>
+
+            <CheckBox Name="SavePosition" IsChecked="{Binding SavePosition}" Content="Save Window Position" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="7" Margin="3" HorizontalAlignment="Left" />
+        </Grid>
+    </GroupBox>
+</UserControl>

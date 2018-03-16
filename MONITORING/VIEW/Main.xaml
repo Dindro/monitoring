@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="MONITORING.Main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MONITORING"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <Style x:Key="StyleSelectedRight" TargetType="{x:Type TreeViewItem}">
+            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+            <EventSetter Event="TreeViewItem.PreviewMouseRightButtonDown" Handler="treeView_PreviewMouseRightButtonDown"/>
+        </Style>
+
+        <HierarchicalDataTemplate x:Key="TemplateSelects" ItemsSource="{Binding Selects}"  
+                                  ItemContainerStyle="{StaticResource StyleSelectedRight}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="tb" Text="{Binding Title}"/>
+                <TextBox x:Name="etb" Visibility="Collapsed" Text="{Binding Title, UpdateSourceTrigger=LostFocus}"
+                         IsVisibleChanged="etb_IsVisibleChanged" MinWidth="100">
+                    <TextBox.InputBindings>
+                        <KeyBinding Key="Enter" Command="{Binding SwitchToEditingMode}" />
+                    </TextBox.InputBindings>
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="LostFocus">
+                            <i:InvokeCommandAction Command="{Binding SwitchToEditingMode}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TextBox>
+            </StackPanel>
+            
+            <!--Children-->
+            <HierarchicalDataTemplate.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="tb" Text="{Binding Title}"/>
+                        <TextBox x:Name="etb" Visibility="Collapsed" Text="{Binding Title, UpdateSourceTrigger=LostFocus}" 
+                                 IsVisibleChanged="etb_IsVisibleChanged" MinWidth="100">
+                            <TextBox.InputBindings>
+                                <KeyBinding Key="Enter" Command="{Binding SwitchToEditingMode}" />
+                            </TextBox.InputBindings>
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="LostFocus">
+                                    <i:InvokeCommandAction Command="{Binding SwitchToEditingMode}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </TextBox>
+                    </StackPanel>
+
+                    <DataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                            <Setter TargetName="tb" Property="FontWeight" Value="Bold" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsEditingName}" Value="True">
+                            <Setter TargetName="tb" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="etb" Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </HierarchicalDataTemplate.ItemTemplate>
+            <!--Children-->
+
+            <!--Триггеры (Выделение)-->
+            <HierarchicalDataTemplate.Triggers>
+                <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                    <Setter TargetName="tb" Property="FontWeight" Value="Bold" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsEditingName}" Value="True">
+                    <Setter TargetName="tb" Property="Visibility" Value="Collapsed" />
+                    <Setter TargetName="etb" Property="Visibility" Value="Visible" />
+                </DataTrigger>
+            </HierarchicalDataTemplate.Triggers>
+        </HierarchicalDataTemplate>
+
+        <ContextMenu x:Key="ContextMenuTreeView">
+            <MenuItem Header="Copy" Command="{Binding Copy}"/>
+            <MenuItem Header="Paste" Command="{Binding Paste}"/>
+            <MenuItem Header="Rename" Command="{Binding Rename}"/>
+            <Separator/>
+            <MenuItem Header="Insert Folder" Command="{Binding AddFolder}" />
+            <MenuItem Header="Delete Folder" Command="{Binding DeleteFolder}"/>
+            <Separator/>
+            <MenuItem Header="Insert Case" Command="{Binding AddSelect}"/>
+            <MenuItem Header="Delete Case" Command="{Binding DeleteSelect}"/>
+            <Separator/>
+            <MenuItem Header="Run"/>
+        </ContextMenu>
+    </UserControl.Resources>
+    
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TreeView x:Name="treeView" ItemsSource="{Binding Folders}" Grid.Column="0" Margin="6" 
+                  ItemTemplate="{StaticResource TemplateSelects}" 
+                  ContextMenu="{StaticResource ContextMenuTreeView}"
+                  ItemContainerStyle="{StaticResource StyleSelectedRight}">
+            
+            <!--Выделение ветки-->
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectedItemChanged">
+                    <i:InvokeCommandAction Command="{Binding SelectItem}"
+                      CommandParameter="{Binding ElementName=treeView, Path=SelectedItem}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TreeView>
+
+        <GridSplitter Grid.Column="1" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#FFD1D1D1" />
+
+        <ContentControl Content="{Binding SelectView}" Grid.Column="2"/>
+    </Grid>
+</UserControl>

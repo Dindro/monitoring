@@ -1,0 +1,174 @@
+﻿<UserControl x:Class="MONITORING.SelectListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MONITORING"
+             mc:Ignorable="d" 
+             xmlns:ik="clr-namespace:IKriv.Wpf"
+             xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             d:DesignHeight="595" d:DesignWidth="760">
+
+    <ScrollViewer x:Name="sv" Background="White" HorizontalScrollBarVisibility="Auto">
+        <GroupBox x:Name="groupBox"  Header="Chart Settings" Margin="6" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <CheckBox x:Name="Activate" IsChecked="{Binding Activate}" Content="Activate/Deactivate Chart" 
+                          Grid.Row="0" Margin="12, 12, 12, 6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                <Grid Grid.Row="1" Margin="9,3,9,3" Height="auto" Width="auto" HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Database Connection" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="3"/>
+                    <ComboBox  Grid.Row="0" Grid.Column="1" Margin="3" Width="120" Height="18"/>
+                    <Button Name="Settings" Command="{Binding Settings}"  Content="Settings" Grid.Row="0" Grid.Column="2" Padding="12,0,12,0" Margin="3" />
+                    <TextBlock Text="SQL Update Frequency" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Left" Margin="3"/>
+                    <local:NumericUpDown Value="{Binding SQLUpdateFrequency}"  x:Name="SQLUpdateFrequency" Width="50" Grid.Row="0" Grid.Column="5" Margin="3" Minimum="0" Maximum="100"/>
+                    <TextBlock Text="sec" Grid.Row="0" Grid.Column="6" Margin="3"/>
+
+                    <TextBlock Text="Time to show result" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" Margin="3"/>
+                    <local:NumericUpDown Value="{Binding TimeToShowResult}" IsEnabled="{Binding TimeToShowResultEnabled}" x:Name="TimeToShow" Width="50" Grid.Row="1" Grid.Column="5" Margin="3" Minimum="0" Maximum="100"/>
+                    <TextBlock Text="sec" Grid.Row="1" Grid.Column="6" HorizontalAlignment="Left" Margin="3"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="9,3,9,3" Height="auto" Width="auto">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="SQL Command" Margin="3" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Left"/>
+                    <TextBox Name="SQLCommand" MinWidth="{Binding Path=ActualWidth, ElementName=groupBox,Converter={ik:MathConverter}, ConverterParameter=x-37}"  Margin="3" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Height="90" VerticalScrollBarVisibility="Visible"
+                             Width="{Binding Path=ActualWidth, ElementName=sv,Converter={ik:MathConverter}, ConverterParameter=x-65}" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Left" 
+                             Text="{Binding SQLCommand}"/>
+                    <Button Name="Exec" Content="Exec" Margin="3" Grid.Row="2" Grid.Column="0" Padding="12,0,12,0"/>
+                    <Button Name="Template" Command="{Binding Template}" Content="Template" Margin="3" Grid.Row="2" Grid.Column="1" Padding="12,0,12,0" />
+                    <Button Name="SaveAsTemplate" Command="{Binding SaveAsTemplate}" Content="Save as template" Margin="3" Grid.Row="2" Grid.Column="2" Padding="12,0,12,0"/>
+                </Grid>
+
+                <GroupBox Header="High water marker field"  Grid.Row="3" Margin="12,6,12,6" Height="auto" Width="auto" HorizontalAlignment="Left">
+                    <Grid Margin="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox IsChecked="{Binding EnableMarker}" x:Name="EnableHighWater" Content="Enable" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" Margin="3" HorizontalAlignment="Left"/>
+                        <CheckBox IsChecked="{Binding ClearResult}" IsEnabled="{Binding ClearResultEnable}" x:Name="ClearResult" Content="Clear result window restangle" Grid.Row="0"  Grid.Column="3" Grid.ColumnSpan="2" Margin="3" HorizontalAlignment="Left"/>
+
+                        <TextBlock Text="High water marker" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left"  Margin="3"/>
+                        <ComboBox ItemsSource="{Binding SQLFieldsRules.Rules}" Grid.Row="1" Grid.Column="1" Margin="3" Width="150" Height="18"/>
+                    </Grid>
+                </GroupBox>
+
+                <Grid Grid.Row="4" Margin="9,3,9,3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="SQL Fields Rules" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment=" Left"  Margin="3"/>
+                    <DataGrid x:Name="SQLFields" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="3" Height="120" 
+                              MinWidth="{Binding Path=ActualWidth, ElementName=groupBox,Converter={ik:MathConverter}, ConverterParameter=x-37}"
+                              Width="{Binding Path=ActualWidth, ElementName=sv,Converter={ik:MathConverter}, ConverterParameter=x-65}"
+                              AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left"
+                              SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False"
+                              SelectedItem="{Binding SelectedItem}"
+                              DataContext="{Binding SQLFieldsRules}" ItemsSource="{Binding Rules}" >
+                        
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header=""  Width="12"/>
+                            <DataGridTextColumn Header="Column Name" Binding="{Binding Name}" Width="auto" />
+
+                            <local:DataGridComboBoxColumnWithBinding Header="Check Type" Width="auto"
+                                                                     ItemsSource="{Binding CheckTypes}"
+                                                                     SelectedValueBinding="{Binding CheckType}"
+                                                                     SelectedValuePath="ID"
+                                                                     DisplayMemberPath="Value"/>
+
+                            <DataGridTextColumn Header="Value" Width="auto" Binding="{Binding Value}"/>
+                            <DataGridCheckBoxColumn Header="Color Notification" Width="auto" Binding="{Binding Color}" />
+
+                            <local:DataGridComboBoxColumnWithBinding Header="Color Type" Width="auto"
+                                                     ItemsSource="{Binding ColorTypes}"
+                                                                     SelectedValueBinding="{Binding ColorType}"
+                                                                     SelectedValuePath="ID"
+                                                                     DisplayMemberPath="Value">
+                                <DataGridComboBoxColumn.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="IsEnabled" Value="{Binding Color}"/>
+                                    </Style>
+                                </DataGridComboBoxColumn.CellStyle>
+                            </local:DataGridComboBoxColumnWithBinding>
+                            
+                            <DataGridCheckBoxColumn Header="Sound Notification" Width="auto" Binding="{Binding Sound}"/>
+                            <local:DataGridComboBoxColumnWithBinding Header="Sound Type" Width="auto" 
+                                                                     ItemsSource="{Binding SoundTypes}"
+                                                                     SelectedValueBinding="{Binding SoundType}"
+                                                                     SelectedValuePath="ID"
+                                                                     DisplayMemberPath="Value">
+                                <DataGridComboBoxColumn.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="IsEnabled" Value="{Binding Sound}"/>
+                                    </Style>
+                                </DataGridComboBoxColumn.CellStyle>
+                            </local:DataGridComboBoxColumnWithBinding>
+
+
+                            <local:DataGridComboBoxColumnWithBinding Header="Alert Type" Width="auto" 
+                                                                     ItemsSource="{Binding AlertTypes}"
+                                                                     SelectedValueBinding="{Binding AlertType}"
+                                                                     SelectedValuePath="ID"
+                                                                     DisplayMemberPath="Value"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Name="AddRule" Command="{Binding AddRule}" Content="Add Rule" Margin="3" Grid.Row="2" Grid.Column="0" Padding="12,0,12,0"/>
+                    <Button Name="DeleteRule" Command="{Binding DeleteRule}" Content="Delete Rule" Margin="3" Grid.Row="2" Grid.Column="1" Padding="12,0,12,0"/>
+                </Grid>
+
+                <local:SaveCancel Grid.Row="6"/>
+            </Grid>
+        </GroupBox>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,87 @@
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\MONITORING.exe.config
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\MONITORING.exe
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\MONITORING.pdb
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\EntityFramework.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\EntityFramework.xml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.xml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\App.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING_MarkupCompile.cache
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING_MarkupCompile.lref
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING.g.resources
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING.Properties.Resources.resources
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING.csproj.GenerateResource.Cache
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING.exe
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING.pdb
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\MONITORING.csprojResolveAssemblyReference.cache
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\FolderListView.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\SelectListView.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Main.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\MainWindow.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\FolderListView.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\SelectListView.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Main.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\MainWindow.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Parts\SaveCancel.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Parts\SaveCancel.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Parts\WindowRestangle.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Parts\WindowRestangle.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Parts\NumericUpDown.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\Parts\NumericUpDown.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\SettingsView.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\SettingsView.baml
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\TemplateView.g.cs
+C:\Users\dindr\Desktop\MONITORING\MONITORING\obj\Debug\VIEW\TemplateView.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\MONITORING.exe.config
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\MONITORING.exe
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\MONITORING.pdb
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\EntityFramework.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Windows.Interactivity.dll
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\EntityFramework.xml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.xml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Data.SQLite.dll.config
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\bin\Debug\System.Windows.Interactivity.xml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING.csprojResolveAssemblyReference.cache
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\TemplateView.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\SettingsView.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Parts\NumericUpDown.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\FolderListView.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Parts\SaveCancel.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\SelectListView.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Main.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\MainWindow.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Parts\WindowRestangle.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\App.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING_MarkupCompile.cache
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING_MarkupCompile.lref
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\TemplateView.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\SettingsView.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Parts\NumericUpDown.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\FolderListView.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Parts\SaveCancel.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\SelectListView.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Main.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\MainWindow.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\VIEW\Parts\WindowRestangle.baml
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING.g.resources
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING.Properties.Resources.resources
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING.csproj.GenerateResource.Cache
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING.exe
+D:\Work\Monitoring\Monitoring WPF MVC\MONITORING\MONITORING\obj\Debug\MONITORING.pdb
